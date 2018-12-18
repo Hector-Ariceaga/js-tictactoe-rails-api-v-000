@@ -103,6 +103,7 @@ function saveGame() {
   } else {
     $.post('/games', gameState, function(game) {
       gameNum = game.data.id;
+      debugger
       $('#games').append(`<button id="game-id-${game.data.id}">Game #${game.data.id}</button>`)
       $(`#game-id-${game.data.id}`).on('click', () => loadPreviousGame(game.data.id))
     })

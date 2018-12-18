@@ -88,10 +88,11 @@ function gameButton(game) {
 
 function saveGame() {
   var state = []
+  var updated_at
   var gameState
 
   $('td').text((index, el) => {state.push(el)})
-
+  
   gameState = {state: state}
 
   if(gameNum) {

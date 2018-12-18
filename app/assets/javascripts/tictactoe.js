@@ -111,7 +111,7 @@ function saveGame() {
 
 function updatedAt(game_data) {
   date = new Date(game_data.attributes['updated-at'])
-  debugger
+  return date
 }
 
 function loadPreviousGame(game_id) {

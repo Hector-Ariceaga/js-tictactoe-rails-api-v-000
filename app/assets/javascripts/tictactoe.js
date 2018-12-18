@@ -83,7 +83,7 @@ function previousGames() {
 
 function gameButton(game) {
   debugger
-  $('#games').append(`<button id="game-id-${game.id}">Game #${game.id}</button> - Last updated: ${updatedAt(game.data)}<br>`)
+  $('#games').append(`<button id="game-id-${game.id}">Game #${game.id} - Last updated: ${updatedAt(game.data)}</button> <br>`)
   $(`#game-id-${game.id}`).on('click', () => loadPreviousGame(game.id))
 }
 

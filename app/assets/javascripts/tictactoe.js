@@ -110,12 +110,16 @@ function saveGame() {
   }
 }
 
+function updatedAt(game_data) {
+  date = new Date(game-data.attributes['updated-at'])
+  
+}
+
 function loadPreviousGame(game_id) {
   $('#message').text("")
   el_num = 0
   $.get(`/games/${game_id}`, function(data) {
     const board = data.data.attributes.state
-
     board.forEach( square => {
       $('td')[el_num].innerHTML = square
       el_num ++

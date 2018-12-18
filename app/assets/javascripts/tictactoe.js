@@ -104,14 +104,14 @@ function saveGame() {
   } else {
     $.post('/games', gameState, function(game) {
       gameNum = game.data.id;
-      $('#games').append(`<button id="game-id-${game.data.id}">Game #${game.data.id} - Last updated: ${updatedAt(game.data)}</button>`)
+      $('#games').append(`<button id="game-id-${game.data.id}">Game #${game.data.id} - Last updated: ${updatedAt(game)}</button>`)
       $(`#game-id-${game.data.id}`).on('click', () => loadPreviousGame(game.data.id))
     })
   }
 }
 
-function updatedAt(game_data) {
-  date = new Date(game_data.attributes['updated-at'])
+function updatedAt(game) {
+  date = new Date(game.attributes['updated-at'])
   return date
 }
 

@@ -112,7 +112,7 @@ function saveGame() {
 
 function updatedAt(game_data) {
   date = new Date(game-data.attributes['updated-at'])
-
+  debugger
 }
 
 function loadPreviousGame(game_id) {

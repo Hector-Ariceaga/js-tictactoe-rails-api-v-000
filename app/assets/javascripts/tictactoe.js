@@ -82,7 +82,7 @@ function previousGames() {
 }
 
 function gameButton(game) {
-  $('#games').append(`<button id="game-id-${game.id}">Game #${game.id}</button><br>`)
+  $('#games').append(`<button id="game-id-${game.id}">Game #${game.id}</button> - Last updated: ${updatedAt(game.data)}<br>`)
   $(`#game-id-${game.id}`).on('click', () => loadPreviousGame(game.id))
 }
 

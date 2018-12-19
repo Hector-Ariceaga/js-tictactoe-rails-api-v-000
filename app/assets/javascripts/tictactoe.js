@@ -92,7 +92,7 @@ function saveGame() {
   var gameState
 
   $('td').text((index, el) => {state.push(el)})
-  
+
   gameState = {state: state}
 
   if(gameNum) {
